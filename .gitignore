@@ -1,3 +1,38 @@
 .env
 venv
-thumbnail.png
+config
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+.env/
+
+# Secrets / configs
+config.py
+.env
+*.env
+
+# OS files
+.DS_Store
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Model/cache files
+models/
+cache/
+
+# Large datasets
+data/raw/
+*.csv
+*.jsonl
+
+# Logs
+logs/
+*.log
+data/*.txt
+data/

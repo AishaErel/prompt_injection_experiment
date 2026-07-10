@@ -79,9 +79,7 @@ than being discarded.
 
 ## Interactive demo
 
-The `app.py` Streamlit app runs your **real pipeline code**, not a
-simulation — every stage in the diagram above executes against whatever you
-paste in. It has two tabs:
+ It has two tabs:
 
 **🔍 Single Document Test** — paste a query and one document (or click an
 attack example in the sidebar) and see:
@@ -97,60 +95,6 @@ pipeline at once (a built-in 10-document benchmark, or your own CSV with
 `text`/`label` columns) and see aggregate **precision, recall, accuracy,
 and benign retention** — the same evaluation methodology as
 `evaluations.py`, just runnable from the browser instead of the CLI.
-
-<p align="center"><i>[screenshot placeholder — add a screenshot of the app here after your first run]</i></p>
-
-### Running it
-
-```bash
-pip install -r requirements.txt
-```
-
-Then set up your free Groq key — no terminal commands needed:
-
-1. Get a free key at [console.groq.com/keys](https://console.groq.com/keys) (sign up with email or Google, no credit card).
-2. In this project folder, copy `.env.example` to a new file named `.env`.
-3. Open `.env` and replace the placeholder with your real key.
-4. Save it. That's it.
-
-```bash
-streamlit run app.py
-```
-
-Then open the local URL Streamlit prints, paste a query and a document (or
-click one of the built-in attack examples in the sidebar), and click **Run
-defense pipeline**.
-
-> **Note on fail-closed behavior:** if `GROQ_API_KEY` is missing, invalid,
-> or rate-limited, the LLM classification stage catches the error and
-> returns `MALICIOUS` by design (see `defenses/groq_classifier.py`) — this
-> is a deliberate fail-closed choice, not a bug. The demo surfaces this in
-> the sidebar so it's never a silent surprise.
-
-### Deploying a public demo
-
-To get a shareable link (not just something people run locally), use
-[Streamlit Community Cloud](https://share.streamlit.io) — it's free and
-built exactly for this:
-
-1. Push this project to a public GitHub repo (this folder can live at the root, or in a subfolder — Streamlit Cloud lets you point at any file path).
-2. Go to [share.streamlit.io](https://share.streamlit.io), sign in with GitHub, and click **New app**.
-3. Point it at your repo and set the main file path to `app.py`.
-4. Before deploying, open **Advanced settings → Secrets** and add:
-   ```toml
-   GROQ_API_KEY = "gsk_..."
-   ```
-   (Streamlit injects secrets as environment variables at runtime — `os.environ.get("GROQ_API_KEY")` in the code picks it up automatically. Never commit your key to the repo itself.)
-5. Deploy. You'll get a `your-app-name.streamlit.app` link you can put directly in a project submission.
-
-Hugging Face Spaces (choose the Streamlit SDK) works the same way, with
-secrets set under your Space's **Settings → Repository secrets** instead.
-
-Because the link will be public, this project caps each browser session to
-a fixed number of pipeline runs (`MAX_RUNS_PER_SESSION` in `app.py`) so a
-stray loop or bot can't quietly burn through your Groq rate limit — a
-reasonable safeguard even though Groq's free tier has no dollar cost
-attached.
 
 ## Dataset
 

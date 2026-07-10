@@ -4,8 +4,7 @@ A multi-stage defense pipeline that detects and mitigates prompt injection
 attacks hidden inside documents retrieved by a Retrieval-Augmented
 Generation (RAG) system — before those documents ever reach the LLM.
 
-**[▶ Try the interactive demo](#interactive-demo)** — paste a query and a document, click an attack example, and watch the real pipeline make its decision live.
-
+** Click for Demo Link: https://promptinjectionexperiment-main-bbbtmvxduonhqsyt9vqm4p.streamlit.app/
 ---
 
 ## The problem

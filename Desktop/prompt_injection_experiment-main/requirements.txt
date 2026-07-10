@@ -1,0 +1,6 @@
+ollama
+dotenv
+pypdf
+scikit-learn
+requests
+python-dotenv

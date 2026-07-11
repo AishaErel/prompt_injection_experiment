@@ -383,7 +383,7 @@ st.markdown(
     (semantic check for what the earlier stages miss).
     <br><br>
     <b>How to use:</b> pick an example question above (fills in a query + matching
-    document), or choose an attack type from the sidebar on the left to load a
+    document), and choose an attack type from the sidebar on the left to load a
     test document — or paste your own of either. Then click <b>Run defense pipeline</b>.
     <br><br>
     📂 <a href="https://github.com/AishaErel/prompt_injection_experiment/tree/demo/Desktop/prompt_injection_experiment-main" target="_blank">Link to demo branch on GitHub</a>

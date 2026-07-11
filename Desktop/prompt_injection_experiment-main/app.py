@@ -370,8 +370,7 @@ st.markdown(
     <b>Live demo of my research</b> on defending RAG systems against prompt
     injection — this app runs the same 5-stage defense pipeline I built and
     tested in the paper, live, on whatever you give it. The final stage
-    makes a real call to an LLM (via the Groq API) — nothing here is
-    simulated.
+    makes a real call to an LLM, llama model (via the Groq API).
     <br><br>
     Attacks are grouped into three categories drawn from prior prompt-injection
     research, representing increasing difficulty to detect: <b>Explicit</b>

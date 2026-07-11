@@ -384,9 +384,10 @@ st.markdown(
     <br><br>
     <b>How to use:</b> pick an example question above (fills in a query + matching
     document), and choose an attack type from the sidebar on the left to load a
-    test document — or paste your own of either. Then click <b>Run defense pipeline</b>.
+    test document. Then click <b>Run defense pipeline</b>.
     <br><br>
-    📂 <a href="https://github.com/AishaErel/prompt_injection_experiment/tree/demo/Desktop/prompt_injection_experiment-main" target="_blank">Link to demo branch on GitHub</a>
+    📂 <a href="https://github.com/AishaErel/prompt_injection_experiment/tree/demo/Desktop/prompt_injection_experiment-main" target="_blank">Link to demo branch created were demo purposes on GitHub</a>
+    📂 <a href="https://github.com/AishaErel/prompt_injection_experiment" target="_blank">Link to main branch based on research paperr</a>
     </div>
     """,
     unsafe_allow_html=True,

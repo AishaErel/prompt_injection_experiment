@@ -3,6 +3,8 @@
 A multi-stage defense pipeline that detects and mitigates prompt injection
 attacks hidden inside documents retrieved by a Retrieval-Augmented
 Generation (RAG) system — before those documents ever reach the LLM.
+
+## 
 This folder is the interactive demo built on top of the full research
 project. For the complete methodology, evaluation code, and write-up,
 see the main branch, README.

@@ -363,24 +363,31 @@ def classify_label(result):
 # Header + intro (visible immediately, no click required)
 # ---------------------------------------------------------------------------
 st.title("🛡️ RAG Prompt Injection Defense — Live Demo")
-
+ 
 st.markdown(
     """
     <div class="intro-box">
     <b>Live demo of my research</b> on defending RAG systems against prompt
     injection — this app runs the same 5-stage defense pipeline I built and
-    tested in the paper.
+    tested in the paper, live, on whatever you give it. The final stage
+    makes a real call to an LLM (via the Groq API) — nothing here is
+    simulated.
     <br><br>
     Attacks are grouped into three categories drawn from prior prompt-injection
     research, representing increasing difficulty to detect: <b>Explicit</b>
     (direct overrides), <b>Subtle</b> (natural-sounding but malicious), and
     <b>Obfuscated</b> (symbol/character tricks).
     <br><br>
-    <b>Pipeline:</b> Rule filter \u2192 Risk scoring \u2192 Soft rerank \u2192 Threshold pruning \u2192 LLM classification.
+    <b>Pipeline:</b> Rule filter (exact-match phrases) \u2192 Risk scoring (keyword/symbol
+    heuristics) \u2192 Soft rerank (risk-penalized ranking, not a hard drop) \u2192
+    Threshold pruning (hard block above a risk score) \u2192 LLM classification
+    (semantic check for what the earlier stages miss).
     <br><br>
     <b>How to use:</b> pick an example question above (fills in a query + matching
-    document), and choose an attack type from the sidebar on the left to load a
-    test document. Then click <b>Run defense pipeline</b>.
+    document), or choose an attack type from the sidebar on the left to load a
+    test document — or paste your own of either. Then click <b>Run defense pipeline</b>.
+    <br><br>
+    📂 <a href="https://github.com/AishaErel/prompt_injection_experiment" target="_blank">View the full source, methodology, and evaluation code on GitHub</a>
     </div>
     """,
     unsafe_allow_html=True,

@@ -386,9 +386,9 @@ st.markdown(
     document), and choose an attack type from the sidebar on the left to load a
     test document. Then click <b>Run defense pipeline</b>.
     <br><br>
-    📂 <a href="https://github.com/AishaErel/prompt_injection_experiment/tree/demo/Desktop/prompt_injection_experiment-main" target="_blank">Link to demo branch created were demo purposes on GitHub</a>
+    📂 <a href="https://github.com/AishaErel/prompt_injection_experiment/tree/demo/Desktop/prompt_injection_experiment-main" target="_blank">GitHub (Demo Branch): Created for demonstration purposes</a>
     <br><br>
-    📂 <a href="https://github.com/AishaErel/prompt_injection_experiment" target="_blank">Link to main branch based on research paperr</a>
+    📂 <a href="https://github.com/AishaErel/prompt_injection_experiment" target="_blank">GitHub (Main Branch): Research paper implementation</a>
     </div>
     """,
     unsafe_allow_html=True,
